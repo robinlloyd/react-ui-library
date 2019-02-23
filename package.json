@@ -1,0 +1,67 @@
+{
+  "name": "react-ui-library",
+  "version": "1.0.0",
+  "description": "A UI library built with React",
+  "main": "index.js",
+  "scripts": {
+    "test": "NODE_ENV=test jest",
+    "start:dev": "webpack-dev-server --content-base examples/"
+  },
+  "jest": {
+    "verbose": true,
+    "testRegex": "test.js",
+    "setupFilesAfterEnv": [
+      "<rootDir>/jestSetup.js",
+      "raf/polyfill"
+    ],
+    "collectCoverage": true,
+    "coverageDirectory": "coverage",
+    "coverageThreshold": {
+      "global": {
+        "branches": 100,
+        "functions": 100,
+        "lines": 100,
+        "statements": 100
+      }
+    }
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-env",
+      "@babel/preset-react"
+    ],
+    "plugins": [
+      "dynamic-import-node"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/robinlloyd/react-ui-library.git"
+  },
+  "author": "Robin Lloyd",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/robinlloyd/react-ui-library/issues"
+  },
+  "homepage": "https://github.com/robinlloyd/react-ui-library#readme",
+  "dependencies": {
+    "react": "^16.8.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.3.3",
+    "@babel/preset-env": "^7.3.1",
+    "@babel/preset-react": "^7.0.0",
+    "babel-jest": "^24.1.0",
+    "babel-loader": "^8.0.5",
+    "babel-plugin-dynamic-import-node": "^2.2.0",
+    "enzyme": "^3.8.0",
+    "enzyme-adapter-react-16": "^1.9.1",
+    "jest-cli": "^24.1.0",
+    "raf": "^3.4.1",
+    "react-dom": "^16.8.2",
+    "react-test-renderer": "^16.8.2",
+    "webpack": "^4.29.4",
+    "webpack-cli": "^3.2.3",
+    "webpack-dev-server": "^3.1.14"
+  }
+}
